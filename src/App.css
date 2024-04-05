@@ -1,0 +1,16 @@
+.app_container {}
+
+.them_lop {
+    display: flex;
+    justify-content: space-between;
+}
+
+.them_diem {
+    display: flex;
+    justify-content: space-between;
+}
+
+.them_monhoc {
+    display: flex;
+    justify-content: space-between;
+}
