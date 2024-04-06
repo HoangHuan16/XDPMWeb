@@ -4,13 +4,14 @@ import { fetchAllDiem } from "../../services/diemService";
 import ThemDiemComponent from "./ThemDiemComponent";
 import UpdateDiemComponent from "./UpdateDiemComponent";
 
-const DiemConponent = () => {
+const DiemConponent = (props) => {
   const [diems, setDiem] = useState([]);
+  const [showUpdateModal, setShowUpdateModal] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [dataUpdate, setDataUpdate] = useState({});
   const updateDiem = (diem) => {
     setDataUpdate(diem);
-    setShowModal(true); // Hiển thị modal sửa điểm
+    setShowUpdateModal(true); // Hiển thị modal sửa điểm
   };
 
   useEffect(() => {
@@ -67,7 +68,12 @@ const DiemConponent = () => {
               <td>{diem.monhoc.tenMH}</td>
               <td>{diem.diem}</td>
               <td>
-                <button className="btn btn-success ms-2">Update</button>
+                <button
+                  className="btn btn-success ms-2"
+                  onClick={() => updateDiem(diem)}
+                >
+                  Update
+                </button>
               </td>
             </tr>
           ))}
@@ -79,8 +85,8 @@ const DiemConponent = () => {
         listDiem={listDiem}
       />
       <UpdateDiemComponent
-        showModal={showModal}
-        handleClose={handleCloseModal}
+        showUpdateModal={showUpdateModal}
+        handleCloseModal={handleCloseModal}
         listDiem={listDiem}
         dataUpdate={dataUpdate}
       />

@@ -1,8 +1,4 @@
 import { Container, Row, Col } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLock, faEnvelope, faGlobe } from '@fortawesome/free-solid-svg-icons';
-import { faEnvelope as farEnvelope } from '@fortawesome/free-regular-svg-icons';
-
 function FooterComponent() {
     return (
         <footer className="bg-body-tertiary" style={{ backgroundColor: 'rgb(78, 78, 130)' }}>
@@ -43,9 +39,9 @@ function FooterComponent() {
                     <Col md={3}>
                         <h5>TÍNH NĂNG THƯỜNG DỤNG</h5>
                         <ul>
-                            <li><FontAwesomeIcon icon={faLock} /> Đăng nhập</li>
-                            <li><FontAwesomeIcon icon={farEnvelope} /> Email: info@example.com</li>
-                            <li><FontAwesomeIcon icon={faGlobe} /> Đường đến STU</li>
+                            <li>  Đăng nhập</li>
+                            <li>  Email: info@example.com</li>
+                            <li>  Đường đến STU</li>
                             {/* Add other utility links here */}
                         </ul>
                     </Col>

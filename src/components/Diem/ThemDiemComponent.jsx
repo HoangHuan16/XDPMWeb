@@ -74,6 +74,7 @@ const ThemDiemComponent = (props) => {
                     ))}
                   </select>
                 </div>
+
                 <div className="mb-3">
                   <label className="form-label">Sinh viên:</label>
                   <select
@@ -89,6 +90,7 @@ const ThemDiemComponent = (props) => {
                     ))}
                   </select>
                 </div>
+
                 <div className="mb-3">
                   <label className="form-label">Điểm:</label>
                   <input
